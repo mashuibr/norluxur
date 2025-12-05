@@ -1,0 +1,189 @@
+.bid-modal .modal-content {
+  max-width: 1400px;
+}
+
+.auction-badge-large {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid #d4af37;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #d4af37;
+  z-index: 2;
+}
+
+.auction-badge-large .pulse-icon {
+  width: 16px;
+  height: 16px;
+  fill: #d4af37;
+  animation: pulse 2s infinite;
+}
+
+.auction-stats-large {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item .stat-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item .stat-value {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: #d4af37;
+  font-weight: 500;
+}
+
+.bid-history {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(10, 10, 10, 0.5);
+  border: 1px solid rgba(136, 136, 136, 0.2);
+}
+
+.bid-history h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #f5f5f5;
+}
+
+.bid-history-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.bid-history-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bid-history-list::-webkit-scrollbar-track {
+  background: rgba(136, 136, 136, 0.1);
+}
+
+.bid-history-list::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 3px;
+}
+
+.bid-history-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.1);
+  align-items: center;
+}
+
+.bid-user {
+  font-size: 0.875rem;
+  color: #b8b8b8;
+}
+
+.bid-amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  color: #d4af37;
+  font-weight: 500;
+}
+
+.bid-time {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.bid-form {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.bid-form h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #f5f5f5;
+}
+
+.bid-input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #d4af37;
+}
+
+.bid-input-group input {
+  width: 100%;
+  background: rgba(10, 10, 10, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 1rem 1rem 1rem 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  transition: border-color 0.3s;
+}
+
+.bid-input-group input:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.bid-note {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .auction-stats-large {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .stat-item .stat-value {
+    font-size: 1.5rem;
+  }
+  
+  .bid-history-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .bid-form {
+    padding: 1.5rem;
+  }
+}

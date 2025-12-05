@@ -1,0 +1,172 @@
+.auction-card {
+  background: rgba(26, 26, 26, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+  cursor: none;
+  transition: all 0.4s;
+  position: relative;
+}
+
+.auction-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+  transition: left 0.6s;
+  z-index: 1;
+}
+
+.auction-card:hover::before {
+  left: 100%;
+}
+
+.auction-card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-10px);
+}
+
+.auction-image-container {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.auction-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.auction-card:hover .auction-image {
+  transform: scale(1.1);
+}
+
+.auction-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid #d4af37;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #d4af37;
+  z-index: 2;
+}
+
+.pulse-icon {
+  width: 12px;
+  height: 12px;
+  fill: #d4af37;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.auction-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 2;
+}
+
+.auction-card:hover .auction-overlay {
+  opacity: 1;
+}
+
+.place-bid {
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  padding: 1rem 2rem;
+  background: transparent;
+}
+
+.auction-info {
+  padding: 1.5rem;
+}
+
+.auction-collection {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.auction-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #f5f5f5;
+}
+
+.auction-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(136, 136, 136, 0.2);
+  border-bottom: 1px solid rgba(136, 136, 136, 0.2);
+}
+
+.auction-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.stat-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: #d4af37;
+  font-weight: 500;
+}
+
+.auction-timer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #b8b8b8;
+}
+
+.auction-timer .icon {
+  width: 16px;
+  height: 16px;
+  fill: #888;
+}

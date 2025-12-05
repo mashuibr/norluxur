@@ -1,0 +1,26 @@
+.upcoming-section {
+  padding: 8rem 0;
+  background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+}
+
+.releases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .releases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .upcoming-section {
+    padding: 4rem 0;
+  }
+  
+  .releases-grid {
+    grid-template-columns: 1fr;
+  }
+}

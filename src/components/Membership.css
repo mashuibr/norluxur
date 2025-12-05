@@ -1,0 +1,143 @@
+.membership-section {
+  padding: 8rem 0;
+  background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+}
+
+.membership-content {
+  text-align: center;
+}
+
+.membership-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #b8b8b8;
+  max-width: 700px;
+  margin: 2rem auto 4rem;
+  font-weight: 300;
+}
+
+.membership-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.tier-card {
+  background: rgba(26, 26, 26, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 3rem 2rem;
+  position: relative;
+  transition: all 0.4s;
+}
+
+.tier-card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-10px);
+}
+
+.tier-card.featured {
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.05);
+  transform: scale(1.05);
+}
+
+.tier-card.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.tier-badge {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d4af37;
+  color: #0a0a0a;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.tier-header {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.2);
+}
+
+.tier-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+
+.tier-tagline {
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.tier-benefits {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 2rem;
+  min-height: 250px;
+}
+
+.tier-benefits li {
+  padding: 1rem 0;
+  padding-left: 1.5rem;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.1);
+  position: relative;
+  color: #b8b8b8;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.tier-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+}
+
+@media (max-width: 1024px) {
+  .membership-tiers {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .tier-card.featured {
+    transform: scale(1);
+  }
+  
+  .tier-card.featured:hover {
+    transform: translateY(-10px);
+  }
+  
+  .tier-benefits {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .membership-section {
+    padding: 4rem 0;
+  }
+  
+  .membership-description {
+    font-size: 1rem;
+  }
+  
+  .tier-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .tier-header h3 {
+    font-size: 2rem;
+  }
+}
